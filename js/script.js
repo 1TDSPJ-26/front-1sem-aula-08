@@ -113,16 +113,218 @@
 // // subTitH2.textContent = "<p>NOVO TEXTO</p>";
 // subTitH2.innerHTML = "<p>novo texto</p>";
 
-const usuario = { 
-  email:"email@email.com",
-  senha:"12345",
-  nome:"José das Couves",
-  idade:33,
-  avatar:"./img/avatar/img-avatar-01.jpg"
-}
 
-const imgAvatar = document.getElementById("avatar-user");
+// const usuario = { 
+//   email:"email@email.com",
+//   senha:"12345",
+//   nome:"José das Couves",
+//   idade:33,
+//   avatar:"./img/avatar/img-avatar-01.jpg"
+// }
 
-imgAvatar.src = usuario.avatar;
-imgAvatar.width = 100;
-imgAvatar.alt = usuario.nome;
+// //Capturando o elemento de avatar:
+// const imgAvatar = document.getElementById("avatar-user");
+
+// //Preenchendo o avatar com os dados do objeto usuário:
+// imgAvatar.src = usuario.avatar;
+// imgAvatar.width = 100;
+// imgAvatar.alt = usuario.nome;
+
+
+//Para casa:
+
+//Recuperar os dados dos campos do FORM e armazenar em um objeto e imprimir eles assim que o botão Entrar for clicado!!
+
+  //Conhecendo as strings
+  //O que são STRINGS?
+
+// let frase = "Estou seguro, agora, utilizo um anti-virus pago!!";
+// console.log(frase);
+
+// //Contando os caractéres da string.
+// console.log(frase.length);
+
+// //Realizando a leitura dinâmica de uma string.
+// for (let x = 0; x < frase.length; x++) {
+    
+//     if(frase[x].toLocaleLowerCase() === "e"){
+//         console.log(`A letra "e" está na posição ${x} da frase`);
+//     }
+
+// }
+
+
+// console.log(usuarios);
+
+
+// function login(...args){
+//     //Contexto da função
+//     let resultado = "";
+//     resultado = args[0] + args[1] + args[2];
+//     console.log(resultado);
+//     return resultado;
+// }
+
+// console.log(login(7,6,8));
+
+// const login = (...args)=>{
+//     //Contexto da função
+//     let resultado = "";
+//     resultado = args[0] + args[1] + args[2];
+//     console.log(resultado);
+//     return resultado;
+// }
+
+// console.log(login(7,6,8));
+
+
+// const botaoEntrar = document.getElementById("btnEntrar");
+
+// // botaoEntrar.addEventListener("click", function(){
+// //     console.log(this);
+// // });
+
+// botaoEntrar.addEventListener("click", ()=>{
+//     console.log(this);
+// });
+
+//Lista de usuários : PSEUDO BANCO
+const usuarios = [
+  {
+    email: "zarak.vultos@exemplo.com",
+    senha: "12345",
+    nome: "Zarak dos Vultos",
+    idade: 42,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "elara.astral@exemplo.com",
+    senha: "12345",
+    nome: "Elara Galáxia Astral",
+    idade: 27,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "mordecai.bruma@exemplo.com",
+    senha: "12345",
+    nome: "Mordecai da Bruma",
+    idade: 51,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "thallos.ferro@exemplo.com",
+    senha: "12345",
+    nome: "Thallos de Ferro",
+    idade: 35,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "lyra.eco@exemplo.com",
+    senha: "12345",
+    nome: "Lyra Silvestre Eco",
+    idade: 22,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "boros.fenda@exemplo.com",
+    senha: "12345",
+    nome: "Boros da Fenda Profunda",
+    idade: 64,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "vaelin.nimbus@exemplo.com",
+    senha: "12345",
+    nome: "Vaelin Nimbus",
+    idade: 30,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "selene.quartzo@exemplo.com",
+    senha: "12345",
+    nome: "Selene de Quartzo",
+    idade: 29,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "kaelthas.sol@exemplo.com",
+    senha: "12345",
+    nome: "Kaelthas Brilho do Sol",
+    idade: 47,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "joric.martelo@exemplo.com",
+    senha: "12345",
+    nome: "Joric Martelo de Pedra",
+    idade: 38,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  }
+];
+
+// usuarios.forEach((u,i,array)=>{
+//     console.log(i,u.nome);
+// } );
+
+
+//Capturar o botão de entrar para iniciar a tarefa de login
+const botaoEntrar = document.getElementById("btnEntrar");
+//Atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login.
+botaoEntrar.addEventListener("click", (e)=>{
+
+    //Pegando o evento disparador e controlando o comportamento do alvo(form) para
+    //não executar por enquanto este mesmo comportamento padrão através da função preventDefault().
+    e.preventDefault();
+
+    //Capturar os campos de email e senha e imprimir seus dados:
+    const email = document.querySelector("#idEmail");
+    const senha = document.querySelector("#idSenha");
+    
+    //Vamos guardar os dados oriundos do form em um objeto:
+    const dadosForm = {
+        email: email.value,
+        senha: senha.value
+    }
+
+    //Iniciando a validação de fato, colocando a lista de usuários contra o objeto dadosForm:
+
+    let isValid = false;
+
+    if(usuarios.length > 0){
+
+        for (const u of usuarios) {
+            if(u.email === dadosForm.email && u.senha === dadosForm.senha){
+               
+                //Capturar a janela de dialog:
+                const modal = document.querySelector("#meuModal");
+                modal.showModal();
+
+                //Capturando o botao do dialog para fechar a janela.
+                const botaoModal = document.querySelector("#btnFecharModal");
+                //Atrelar um evento para o botão de fechamento encerrar a janela de dialog.
+                botaoModal.addEventListener("click", ()=>{
+                  //utilizando o elemento dialog já capturado para encerrar.
+                  modal.close();
+                });
+                
+                
+                isValid = true;
+                break;
+            }
+        }
+ 
+    }else{
+        alert("Ocorreu um problema com as informações do sistema!");
+    }
+
+    if (!isValid) {
+        alert("Email ou senha incorretos!");
+    }
+});
+
+//Pra casa
+// Incrementar a validação com uma mensagem temporizadora na tela:
+// Utilize a função setInterval().
+// Onde o usuário recebe a mensagem de Sucesso e que vai ser redirecionado em 5 segundos,
+// com um contador rodando.
+// Utilize a função window.location.href = destino para redirecionar o usuário!
