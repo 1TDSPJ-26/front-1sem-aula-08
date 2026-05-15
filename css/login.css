@@ -7,16 +7,34 @@ input:invalid:not(:placeholder-shown){
     border: 2px solid red;
 }
 
-/* 
-input{
-    background-color: #d29292;
-} 
-
-input[type="email"], input[type="password"]{
-    background-color: #d29292;
+#meuModal{
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    background-color: #b3ffb3;
+    color: #074f07;
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
 }
 
-#idEmail, #idSenha{
-    background-color: #d29292;
+#meuModal::backdrop {
+    background-color: rgba(0,0,0,0.7);
 }
-*/
+
+#btnFecharModal {
+    position: absolute;
+    border-radius: 100%;
+    background-color: transparent;
+    right: 0.8rem;
+    top: 0.8rem;
+    width: 5%;
+    height: 21.5%;
+    color: #074f07;
+    border: none;
+    cursor: pointer;
+}
+
+#btnFecharModal::before {
+    content: "x";
+}
