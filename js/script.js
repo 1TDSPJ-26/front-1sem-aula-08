@@ -296,23 +296,22 @@ botaoEntrar.addEventListener("click", (e)=>{
             if(u.email === dadosForm.email && u.senha === dadosForm.senha){
                 alert("Login realizado com sucesso!");
                 isValid = true;
-                break
-            }  
-            
+                break;
+            }
         }
-    
+ 
     }else{
         alert("Ocorreu um problema com as informações do sistema!");
     }
 
-    if (isValid) {
-        alert("Email ou senha incorretos!")
+    if (!isValid) {
+        alert("Email ou senha incorretos!");
     }
 });
 
 //Pra casa
-// // incrementar a validação com uma mensagem temporizadora na tela:
-// utilize a função setInterval().
-// Onde o usuário recebe a mensagem de Suceso e que vai ser redirecionado em 5 segundos.
-// como um contador rodando.
+// Incrementar a validação com uma mensagem temporizadora na tela:
+// Utilize a função setInterval().
+// Onde o usuário recebe a mensagem de Sucesso e que vai ser redirecionado em 5 segundos,
+// com um contador rodando.
 // Utilize a função window.location.href = destino para redirecionar o usuário!
