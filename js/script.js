@@ -294,19 +294,41 @@ botaoEntrar.addEventListener("click", (e)=>{
 
         for (const u of usuarios) {
             if(u.email === dadosForm.email && u.senha === dadosForm.senha){
-                
-              //Capturar a janela de dialog:  
-              const modal = document.querySelector("#meuModal");
-              modal.showModal();
-              
-              //Capturando o botão do dialog para fechar a janela.
-              const botaoModal = document.querySelector("#btnFecharModal")
-              botaoModal.addEventListener("click", ()=>{
-                modal.close();
-              });
+               
+                //Capturar a janela de dialog:
+                const modal = document.querySelector("#meuModal");
+                modal.showModal();
 
-              isValid = true;
-              break;
+                //Capturando o botao do dialog para fechar a janela.
+                const botaoModal = document.querySelector("#btnFecharModal");
+                //Atrelar um evento para o botão de fechamento encerrar a janela de dialog.
+                botaoModal.addEventListener("click", ()=>{
+                  //utilizando o elemento dialog já capturado para encerrar.
+                  modal.close();
+                });
+
+                //TIMER COM INJEÇÃO DA MSG DE SUCESSO
+                //Capturar o elemento que apresenta a msg no dialog
+                const divMsg = document.querySelector("#msg");
+
+
+                divMsg.innerHTML = "<p>Login realizado com sucesso</p><p>Você será redirecionado em 5 segundos</p>";
+
+                let contador = 5;
+
+                const intervalo = setInterval( ()=>{
+                  contador--;
+                  divMsg.innerHTML = `<p>Login realizado com sucesso</p><p>Você será redirecionado em ${contador} segundos</p>`;
+                  if(contador === 0){
+                  clearInterval(intervalo);
+                  window.location.href="../index.html"
+                }
+                }, 1000);
+
+                
+                
+                isValid = true;
+                break;
             }
         }
  
@@ -320,7 +342,8 @@ botaoEntrar.addEventListener("click", (e)=>{
 });
 
 //Pra casa
-//INCREMENTAR A VALIDAÇÃO COM UMA MENSAGEM TEMPORIZADORA NA TELA:
+// Incrementar a validação com uma mensagem temporizadora na tela:
 // Utilize a função setInterval().
-// Onde o usuário recebe a mensagem de Sucesso e que vai redirecionar em 5 segundos, com um contador rodando.
-// Utilize a função window.location.href = destino para redirecionar usuário!
+// Onde o usuário recebe a mensagem de Sucesso e que vai ser redirecionado em 5 segundos,
+// com um contador rodando.
+// Utilize a função window.location.href = destino para redirecionar o usuário!
