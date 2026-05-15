@@ -1,245 +1,346 @@
-//Comentário em JavaScript
-/* 
-    Comentário de múltiplas linhas
-    em JavaScript
-*/
-//Forma de declaração de variantes em JavaScript
-/*var nome = "João"; //Evite
-let sobrenome = "Silva"; //USA, CARACOLES!
-const idade = 30; //Constante, não pode ser alterada ao fluxo do código
-
-console.log(nome);
-console.log(sobrenome);
-console.log(idade);
-
-//exemplo de diferença entre var e let
-if(true){
-    var nome = "Maria";
-    let sobrenome = "Ana";
-}
-
-console.log(nome); //Maria
-console.log(sobrenome); //Silva
-*/
-
-//tipos de dados em JavaScript
-/*
-const nome = "Matheus";
-console.log(typeof nome); //string
-const idade = 25;
-console.log(typeof idade); //number
-const isStudent = true;
-console.log(typeof isStudent); //boolean
-const numerodecimal = 3.14;
-console.log(typeof numerodecimal); //number
-const nulo = null;
-console.log(typeof nulo);
-const indefinido = undefined;
-console.log(typeof indefinido);
-const simbolo = Symbol("simbolo");
-console.log(typeof simbolo);
-const objeto = { nome: "Carlos", idade: 40 };
-console.log(typeof objeto);
-const array = [1, 2, 3, 4, 5];
-console.log(typeof array);
-
-//Como declaramos um objeto em JavaScript
-const pessoa = {
-    nome: "Ana",
-    idade: 28,
-    profissao: "Engenheira",
-    hobbies: ["leitura", "viagem", "culinária"],
-    endereco: {
-        rua: "Rua das Flores",
-        numero: 123,
-        cidade: "São Paulo",
-        estado: "SP"
-    }
-};
-
-console.log(pessoa);
-console.log(pessoa.nome);
-*/
-//lição de casa:
-//criar um objeto que seja semelhandte aos dados do formulário de login
-//imprimir o objeto no console
-/*
+// //Comentário em linha
+// /*
+//     Comentário em bloco
+// */
+ 
+// //Forma de declaração de variáveis
+ 
+// var nome = "Alê"; //Deve ser evitado
+// let sobrenome = "C. de Jesus";//Deve ser utilizado
+// // const idade = 20;//Constante, não pode ser alterada no fluxo do código
+ 
+// //Exemplo da diferencia entre var e let
+ 
+// if(true){
+//     var nome = "Joaquim"; //Deve ser evitado
+//     let sobrenome = "de Paula";//Deve ser utilizado
+// }
+// console.log(nome);
+// console.log(sobrenome);
+// // console.log(idade);
+ 
+ 
+//Tipos de dados:
+// const nome = "Alê";
+// console.log(typeof nome);
+// const idade = 20;
+// console.log(typeof idade);
+// const numeroDecimal = 20.345678910111;
+// console.log(typeof numeroDecimal);
+// const estaAprovado = true;
+// console.log(typeof estaAprovado);
+// const sobrenome = undefined;
+// console.log(typeof sobrenome);
+// let naoDeclarada;
+// console.log(typeof naoDeclarada);
+// const corSelecionada = null;
+// console.log(typeof corSelecionada);
+// const objeto = {};
+// console.log(typeof objeto);
+// const array = [];
+// console.log(typeof array);
+// const objeto2 = {nome: "Alê", sobrenome: "C. de Jesus"};
+// console.log(typeof objeto2);
+// const array2 = ["Alê", "C. de Jesus", 20, true];
+// console.log(typeof array2);
+// const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ 
+// //Tipagem no JS é dinâmica
+// let variavel;
+// console.log("Valor: " + variavel);
+// console.log("Tipo: " + typeof variavel);
+ 
+// variavel = "Alê";
+// console.log("Valor: " + variavel);
+// console.log("Tipo: " + typeof variavel);
+ 
+// variavel = true;
+// console.log("Valor: " + variavel);
+// console.log("Tipo: " + typeof variavel);
+ 
+ 
+// //Como declaramos um Objeto em javaScript
+// const objeto1 = {
+//   nome: "Alê",
+//   sobrenome: "C. de Jesus",
+//   idade: 20,
+//   estaAprovado: true
+//   };
+// console.log(objeto1);
+// console.log(typeof objeto1);
+ 
+ 
+// Lição de Casa:
+// Crie um objeto que seja semelhante aos dados do formulário de login
+// Imprmir os dados do objeto no console.
+ 
+ 
+//Declarando um objeto espelhado ao FORMULÁRIO DE LOGIN
+ 
 //Objeto Usuário:
-
-const usuario = {
-    email: "exemplo@exemplo.com",
-    senha: "123456",
-    nome: "Exemplo de Exemplo",
-    idade: 33,
-    avatar: "./img/avatar/avatar-placeholder.png"
-}
-
-/*
-//log de todos os atributos do objeto
-
-console.log(usuario)
-console.table(usuario)
-
-//log de um atributo do objeto
-
-console.log(usuario.nome)
-
-//alterar a informação de um atributo direto no atributo
-
-usuario.nome = "Exemplar dos Exemplissimos"
-console.log(usuario.nome)
-
-//Alterar a informação de um atributo com um objeto
-
-let nome = "José"
-usuario.nome = nome
-console.log(usuario.nome)
-*/
-
-//let subtituloH2 = document.getElementById("teste");
-//imprimindo o elemento capturado
-//console.log(subtituloH2)
-//Bora escrever no CORNO desse <h2>
-//subtituloH2.textContent =  "Novo texto"
-//subtituloH2.innerHTML = "<p>Sou cego</p>".toUpperCase()
-/*
-//Capturando o elemento de avatar!!
-let imgAvatar = document.getElementById("avatar-user")
-
-//Processando o avatar com os dados do objeto usuário
-imgAvatar.src = usuario.avatar
-imgAvatar.alt = usuario.nome
-imgAvatar.width = 40
-*/
-
-//Recuperando dados dos campos da form e amarzenando em um objeto assim que o botão entrar dor clicado
-
-//Conhecendo as Strings
-
-/*let frase = "Olá, mundo!";
-console.log(frase);
-
-//Contando os caractéres de uma string
-
-console.log(frase.length);
-console.log(frase[2]);
-
-//Realizando a leitura dinâmica de uma string
-
-for(let x = 0; x < frase.length; x++){
-    console.log(frase[x]);
-    
-    if(frase[x].toLocaleLowerCase() === "o"){
-        console.log("Encontrei um o na posição " + x);
-    }
-}*/
-
-
-//console.log(usuarios);
-//console.table(usuarios);
-
-//funções em JavaScript
-
-/*function login(){
-    //contexto da função
-    let resultado = "Login realizado com sucesso!";
-    resultado = "Login falhou! Verifique suas credenciais.";
-    return resultado;
-    }
-    
-    console.log(login());
-    */
+ 
+// const usuario = {
+//   email:"email@email.com",
+//   senha:"12345",
+//   nome:"José das Couves",
+//   idade:33,
+//   avatar:"./img/avatar/img-avatar-01.jpg"
+// }
+ 
+// //Imprimindo os dados do objeto:
+// console.log(usuario);
+// console.table(usuario);
+ 
+// //Imprimindo um único dado do objeto:
+// console.log(usuario.nome);
+ 
+// //Alterar um único dado do objeto:
+// usuario.nome = "Antonio das Alfaces";
+// //Imprimindo um único dado do objeto:
+// console.log(usuario.nome);
+ 
+// let nome = "Joaquim dos Tomates";
+// //Alterar um único dado do objeto:
+// usuario.nome = nome;
+// //Imprimindo um único dado do objeto:
+// console.log(usuario.nome);
+ 
+// const subTitH2 = document.getElementById("teste");
+// //Imprimeindo o elemento capturado:
+// console.log(subTitH2);
+ 
+// //Vamos escrever no h2
+// // subTitH2.textContent = "<p>NOVO TEXTO</p>";
+// subTitH2.innerHTML = "<p>novo texto</p>";
+ 
+ 
+// const usuario = {
+//   email:"email@email.com",
+//   senha:"12345",
+//   nome:"José das Couves",
+//   idade:33,
+//   avatar:"./img/avatar/img-avatar-01.jpg"
+// }
+ 
+// //Capturando o elemento de avatar:
+// const imgAvatar = document.getElementById("avatar-user");
+ 
+// //Preenchendo o avatar com os dados do objeto usuário:
+// imgAvatar.src = usuario.avatar;
+// imgAvatar.width = 100;
+// imgAvatar.alt = usuario.nome;
+ 
+ 
+//Para casa:
+ 
+//Recuperar os dados dos campos do FORM e armazenar em um objeto e imprimir eles assim que o botão Entrar for clicado!!
+ 
+  //Conhecendo as strings
+  //O que são STRINGS?
+ 
+// let frase = "Estou seguro, agora, utilizo um anti-virus pago!!";
+// console.log(frase);
+ 
+// //Contando os caractéres da string.
+// console.log(frase.length);
+ 
+// //Realizando a leitura dinâmica de uma string.
+// for (let x = 0; x < frase.length; x++) {
    
-   //const botaoentrar = document.getElementById("btn-entrar");
+//     if(frase[x].toLocaleLowerCase() === "e"){
+//         console.log(`A letra "e" está na posição ${x} da frase`);
+//     }
+ 
+// }
+ 
+ 
+// console.log(usuarios);
+ 
+ 
+// function login(...args){
+//     //Contexto da função
+//     let resultado = "";
+//     resultado = args[0] + args[1] + args[2];
+//     console.log(resultado);
+//     return resultado;
+// }
+ 
+// console.log(login(7,6,8));
+ 
+// const login = (...args)=>{
+//     //Contexto da função
+//     let resultado = "";
+//     resultado = args[0] + args[1] + args[2];
+//     console.log(resultado);
+//     return resultado;
+// }
+ 
+// console.log(login(7,6,8));
+ 
+ 
+// const botaoEntrar = document.getElementById("btnEntrar");
+ 
+// // botaoEntrar.addEventListener("click", function(){
+// //     console.log(this);
+// // });
+ 
+// botaoEntrar.addEventListener("click", ()=>{
+//     console.log(this);
+// });
+ 
+//Lista de usuários : PSEUDO BANCO
+const usuarios = [
+  {
+    email: "zarak.vultos@exemplo.com",
+    senha: "12345",
+    nome: "Zarak dos Vultos",
+    idade: 42,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "elara.astral@exemplo.com",
+    senha: "12345",
+    nome: "Elara Galáxia Astral",
+    idade: 27,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "mordecai.bruma@exemplo.com",
+    senha: "12345",
+    nome: "Mordecai da Bruma",
+    idade: 51,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "thallos.ferro@exemplo.com",
+    senha: "12345",
+    nome: "Thallos de Ferro",
+    idade: 35,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "lyra.eco@exemplo.com",
+    senha: "12345",
+    nome: "Lyra Silvestre Eco",
+    idade: 22,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "boros.fenda@exemplo.com",
+    senha: "12345",
+    nome: "Boros da Fenda Profunda",
+    idade: 64,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "vaelin.nimbus@exemplo.com",
+    senha: "12345",
+    nome: "Vaelin Nimbus",
+    idade: 30,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "selene.quartzo@exemplo.com",
+    senha: "12345",
+    nome: "Selene de Quartzo",
+    idade: 29,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "kaelthas.sol@exemplo.com",
+    senha: "12345",
+    nome: "Kaelthas Brilho do Sol",
+    idade: 47,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "joric.martelo@exemplo.com",
+    senha: "12345",
+    nome: "Joric Martelo de Pedra",
+    idade: 38,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  }
+];
+ 
+// usuarios.forEach((u,i,array)=>{
+//     console.log(i,u.nome);
+// } );
+ 
+ 
+//Capturar o botão de entrar para iniciar a tarefa de login
+const botaoEntrar = document.getElementById("btnEntrar");
+//Atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login.
+botaoEntrar.addEventListener("click", (e)=>{
+ 
+    //Pegando o evento disparador e controlando o comportamento do alvo(form) para
+    //não executar por enquanto este mesmo comportamento padrão através da função preventDefault().
+    e.preventDefault();
+ 
+    //Capturar os campos de email e senha e imprimir seus dados:
+    const email = document.querySelector("#idEmail");
+    const senha = document.querySelector("#idSenha");
    
-   /*botaoentrar.addEventListener("click", function(event){
-    console.log(this);
-    })*/
-    const usuarios = [
-      {
-        email: "zarak.vultos@exemplo.com",
-        senha: "12345",
-        nome: "Zarak dos Vultos",
-        idade: 42,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "elara.astral@exemplo.com",
-        senha: "12345",
-        nome: "Elara Galáxia Astral",
-        idade: 27,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "mordecai.bruma@exemplo.com",
-        senha: "12345",
-        nome: "Mordecai da Bruma",
-        idade: 51,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "thallos.ferro@exemplo.com",
-        senha: "12345",
-        nome: "Thallos de Ferro",
-        idade: 35,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "lyra.eco@exemplo.com",
-        senha: "12345",
-        nome: "Lyra Silvestre Eco",
-        idade: 22,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "boros.fenda@exemplo.com",
-        senha: "12345",
-        nome: "Boros da Fenda Profunda",
-        idade: 64,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "vaelin.nimbus@exemplo.com",
-        senha: "12345",
-        nome: "Vaelin Nimbus",
-        idade: 30,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "selene.quartzo@exemplo.com",
-        senha: "12345",
-        nome: "Selene de Quartzo",
-        idade: 29,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "kaelthas.sol@exemplo.com",
-        senha: "12345",
-        nome: "Kaelthas Brilho do Sol",
-        idade: 47,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      },
-      {
-        email: "joric.martelo@exemplo.com",
-        senha: "12345",
-        nome: "Joric Martelo de Pedra",
-        idade: 38,
-        avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
-      }
-    ];
+    //Vamos guardar os dados oriundos do form em um objeto:
+    const dadosForm = {
+        email: email.value,
+        senha: senha.value
+    }
+ 
+    //Iniciando a validação de fato, colocando a lista de usuários contra o objeto dadosForm:
+ 
+    let isValid = false;
+ 
+    if(usuarios.length > 0){
+ 
+        for (const u of usuarios) {
+            if(u.email === dadosForm.email && u.senha === dadosForm.senha){
+               
+                //Capturar a janela de dialog:
+                const modal = document.querySelector("#meuModal");
+                modal.showModal();
+ 
+                //Capturando o botao do dialog para fechar a janela.
+                const botaoModal = document.querySelector("#btnFecharModal");
+                //Atrelar um evento para o botão de fechamento encerrar a janela de dialog.
+                botaoModal.addEventListener("click", ()=>{
+                  //utilizando o elemento dialog já capturado para encerrar.
+                  modal.close();
+                });
 
-    /*
-    usuarios.forEach((u, i)=>{
-        console.log(i, u.nome);
-    });
-    */
+                //timer com injeção de msg
+                //capturar o elemento que apresenta a msg no dialog
+                const divMsg = document.querySelector("#msg");
+                divMsg.innerHTML = "<p>Login realizado com sucesso</p><p>Você será redirecionado em 5 segundos...</p>";
 
-    //capturando o botão de entrar para iniciar a tarefa de login
-    const btnEntrar = document.getElementById("btn-entrar");
-    //atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login
-    btnEntrar.addEventListener("click", ()=>{
-        //capturando os dados dos campos de email e senha
-        const emailInput = document.querySelector("#idEmail");
-        const senhaInput = document.querySelector("#idSenha");
-        console.log(emailInput.value, senhaInput.value);
-    });
+                let contador = 5;
+                const intervalo = setInterval(()=>{
+                  contador--
+                  divMsg.innerHTML = `<p>Login realizado com sucesso</p><p>Você será redirecionado em ${contador} segundos...</p>`
+
+                if(contador === 0){
+                  clearInterval(intervalo)
+                }
+                }, 1000);
+
+              
+               
+                isValid = true;
+                break;
+            }
+        }
+ 
+    }else{
+        alert("Ocorreu um problema com as informações do sistema!");
+    }
+ 
+    if (!isValid) {
+        alert("Email ou senha incorretos!");
+    }
+});
+ 
+//Pra casa
+// Incrementar a validação com uma mensagem temporizadora na tela:
+// Utilize a função setInterval().
+// Onde o usuário recebe a mensagem de Sucesso e que vai ser redirecionado em 5 segundos,
+// com um contador rodando.
+// Utilize a função window.location.href = destino para redirecionar o usuário!

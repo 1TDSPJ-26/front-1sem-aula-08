@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/main.css" />
  
     <script src="./js/script.js" defer></script>
-
+ 
     <title>ESPORTES TOTAIS - LOGIN</title>
   </head>
  
@@ -29,29 +29,53 @@
         <div class="hero__container">
           <h1 class="hero__title">CONTROLE DE ACESSO</h1>
  
-          <div>
-            <h2 id="teste">TESTE</h2>
-            <img id="avatar-user">
-          </div>
-
-          <form action="/action_page.php" method="get">
+ 
+          <dialog id="meuModal">
+            <button aria-label="Fechar a Janela" id="btnFecharModal">X</button>
+            <div id="msg">
+              <p>TESTE DE MSG</p>
+            </div>
+          </dialog>
+ 
+          <form action="" method="">
             <fieldset>
-                <div>
-                    <label for="idEmail" class="hero__label">Email:</label>
-                    <input type="email" id="idEmail" name="idEmail" placeholder="Digite seu email" minlength="7" maxlength="50" required>
-                </div>
-                <div>
-                    <label for="idSenha" class="hero__label">Senha:</label>
-                    <input type="password" id="idSenha" name="idSenha" placeholder="Digite sua senha" minlength="6" maxlength="20" required>
-                </div>
-                <div>
-                    <input id="btn-entrar" type="submit" id="idSubmit" name="idSubmit" value="Entrar">
-                </div>
+              <div>
+                <label for="idEmail">Email</label>
+                <input
+                  type="email"
+                  id="idEmail"
+                  name="email"
+                  placeholder="Digite seu email"
+                  minlength="7"
+                  maxlength="150"
+                  required
+                />
+              </div>
+                            <div>
+                <label for="idSenha">Senha</label>
+                <input
+                  type="password"
+                  id="idSenha"
+                  name="senha"
+                  placeholder="Digite sua senha"
+                  minlength="5"
+                  maxlength="30"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" id="btnEntrar">Entrar</button>
+              </div>
             </fieldset>
           </form>
  
           <span>Ainda não tem conta?</span>
-          <a aria-label="Para criar sua conta." class="hero__btn" href="./cadastro.html">Clique Aqui</a>
+          <a
+            aria-label="Para criar sua conta."
+            class="hero__btn"
+            href="./cadastro.html"
+            >Clique Aqui</a
+          >
         </div>
       </section>
     </main>
@@ -62,8 +86,7 @@
       </p>
     </footer>
  
- 
+   
  
   </body>
 </html>
- 
