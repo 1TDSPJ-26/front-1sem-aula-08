@@ -295,17 +295,39 @@ botaoEntrar.addEventListener("click", (e)=>{
         for (const u of usuarios) {
             if(u.email === dadosForm.email && u.senha === dadosForm.senha){
                
-                //Capturar a janela de dialogo:
+                //Capturar a janela de dialog:
                 const modal = document.querySelector("#meuModal");
                 modal.showModal();
-                //Capturando o botão do dialog para fechar a janela
-                const botaoModal = document.querySelector("#btnFecharModal")
-                //Atrelar um evento para o botão de fechamento encerrar a janela de dialog:
-                botaoModal.addEventListener("click", ()=>{
-                  //Utilizando o elemento já capturado para encerrar.
-                  modal.close();
-                })
 
+                //Capturando o botao do dialog para fechar a janela.
+                const botaoModal = document.querySelector("#btnFecharModal");
+                //Atrelar um evento para o botão de fechamento encerrar a janela de dialog.
+                botaoModal.addEventListener("click", ()=>{
+                  //utilizando o elemento dialog já capturado para encerrar.
+                  modal.close();
+                });
+
+                //TIMER COM INJEÇÃO DA MSG DE SUCESSO
+                //Capturar o elemento que apresenta a msg no dialog
+                const divMsg = document.querySelector("#msg");
+
+                //Adicionando uma nova tag a esta div capturada com a propriedade innerHTML.
+
+                divMsg.innerHTML = "<p>Login realizado com SUCESSO!</p><p>Você será redirecionado em 5 segundos...</p>";
+
+                let contador = 5;
+
+                const intervalo = setInterval( ()=>{
+                    contador--;
+                    divMsg.innerHTML = `<p>Login realizado com SUCESSO!</p><p>Você será redirecionado em ${contador} segundos...</p>`;
+
+                    if(contador === 0){
+                      clearInterval(intervalo)
+                    }
+
+                }, 1000 );
+
+                
                 isValid = true;
                 break;
             }
@@ -320,3 +342,6 @@ botaoEntrar.addEventListener("click", (e)=>{
     }
 });
 
+//Pra casa
+// Reaproveitar a janela de MODAL no caso de o usuário errar o login.
+// Realizar o redirect com window em caso de sucesso!
