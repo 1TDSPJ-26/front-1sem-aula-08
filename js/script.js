@@ -314,6 +314,22 @@ botaoEntrar.addEventListener("click", (e)=>{
                 modal.close();
               });
 
+              //TIMER COM INJEÇÃO DA MENSAGEM DE SUCESSO
+              //capturar o elemento que apresenta a mensagem no dialog
+              const divMsg = document.querySelector("#msg");
+              //adicionando uma nova tag a esta div capturada com a propriedade innerHTML
+              divMsg.innerHTML = "<p>Login realizado com sucesso!</p>";
+
+              let contador = 5;
+
+                const intervalo = setInterval( ()=>{
+                    contador--;
+                    divMsg.innerHTML = `<p>Login realizado com SUCESSO!</p><p>Você será redirecionado em ${contador} segundos...</p>`;
+
+                    if(contador === 0){
+                      clearInterval(intervalo);
+                    }
+                }, 1000 );
 
                 isValid = true;
                 break;
@@ -333,3 +349,7 @@ botaoEntrar.addEventListener("click", (e)=>{
 // utilize a função setInterval()       onde o usuário recebe a mensagem de sucesso e que vai ser redirecionado em 5 segundos, com um contador rodando
 //use a função window.location.href = destino para redirecionar o usuário
 
+
+//Pra casa
+// Reaproveitar a janela de MODAL no caso de o usuário errar o login.
+// Realizar o redirect com window em caso de sucesso!
