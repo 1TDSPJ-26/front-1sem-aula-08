@@ -304,7 +304,19 @@ botaoEntrar.addEventListener("click", (e)=>{
 
         for (const u of usuarios) {
             if(u.email === dadosForm.email && u.senha === dadosForm.senha){
-                alert("Login realizado com sucesso!");
+               
+                //Capturar a janela de dialog:
+                const modal = document.querySelector("#meuModal");
+                modal.showModal();
+
+                //Capturando o botao do dialog para fechar a janela.
+                const botaoModal = document.querySelector("#btnFecharModal");
+                //Atrelar um evento para o botão de fechamento encerrar a janela de dialog.
+                botaoModal.addEventListener("click", ()=>{
+                  //utilizando o elemento dialog já capturado para encerrar.
+                  modal.close();
+                });
+
                 isValid = true;
                 break;
             }
@@ -319,3 +331,9 @@ botaoEntrar.addEventListener("click", (e)=>{
     }
 });
 
+//Pra casa
+// Incrementar a validação com uma mensagem temporizadora na tela:
+// Utilize a função setInterval().
+// Onde o usuário recebe a mensagem de Sucesso e que vai ser redirecionado em 5 segundos,
+// com um contador rodando.
+// Utilize a função window.location.href = destino para redirecionar o usuário!
