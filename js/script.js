@@ -308,7 +308,22 @@ botaoEntrar.addEventListener("click", (e)=>{
 
                   modal.close()
                 });
+                //TIMER DA MSG DE SUCESSO
+                //Capturar o elemnto que apresenta a msg no dialog 
+                const divMsg = document.querySelector("#msg")
 
+                //Adicionando uma nova tag a esta div capturada com a propriedade INNERHTML.
+
+                
+                
+                let contador =5;
+
+                const intervalo = setInterval(()=>{
+                  divMsg.innerHTML=`<p>Login realizado com sucesso!</p><p>VOCE SERA REDICERECIONADO EM ${contador}SEGUNDO........</p>`
+                }, 1000)
+                if(contador==0){
+                  clearInterval(intervalo)
+                }
                 isValid = true;
                 break;
             }

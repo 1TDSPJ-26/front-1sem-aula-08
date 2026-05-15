@@ -1,0 +1,39 @@
+
+input:valid:not(:placeholder-shown){
+     border: 2px solid green;
+}
+
+input:invalid:not(:placeholder-shown){
+    border: 2px solid red;
+}
+
+#meuModal{
+    width: 80%;
+    height: 40%;
+    margin: 2% auto;
+    background-color: #74be74;
+    color: #096409;
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+#btnFecharModal{
+    position: absolute;
+    right: 0.8rem;
+    top: 0.8rem;
+    border-radius: 50%;
+    width: 5%;
+    height: 21.5%;
+    background-color: #74be74;
+    color: #096409;
+    cursor: pointer;
+}
+
+#btnFecharModal::before{
+    content: "X";
+}
+
+#meuModal::backdrop{
+    background-color: rgba(0,0,0,0.5);
+}
