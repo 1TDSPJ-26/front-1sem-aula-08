@@ -1,8 +1,36 @@
-
-input:valid:not(:placeholder-shown){
-     border: 2px solid green;
+input:valid:not(:placeholder-shown) {
+  border: 2px solid green;
 }
 
-input:invalid:not(:placeholder-shown){
-    border: 2px solid red;
+input:invalid:not(:placeholder-shown) {
+  border: 2px solid red;
+}
+
+#meuModal{
+  width: 80%;
+  height: 40%;
+  margin: 2% auto;
+  background-color: #76bd76
+  color:rgb(0, 85, 18)
+  font-size: 3rem;text-align: center;
+}
+
+#btnFecharModal {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  border-radius: 50%;
+  width: 5%;
+  height: 21.5%
+  background-color: #76bd76;
+  color: #074f07;
+  cursor: pointer;
+}
+
+#meuModal::{
+  backgorund-color: rgba(0,0,0,0.5);
+}
+
+#btnFecharModal::before {
+  content: "X";
 }
