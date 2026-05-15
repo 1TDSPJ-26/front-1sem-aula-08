@@ -9,8 +9,8 @@
     <script src="./js/script.js" defer></script>
 
     <title>ESPORTES TOTAIS - LOGIN</title>
-  </head>
-
+  </head> 
+ 
   <body>
     <header class="cabecalho">
       <nav class="cabecalho__nav">
@@ -28,10 +28,14 @@
       <section class="hero">
         <div class="hero__container">
           <h1 class="hero__title">CONTROLE DE ACESSO</h1>
-          <div>
-            <h2 id="teste">TESTE</h2>
-            <img id="avatar-user">
-          </div>
+
+
+          <dialog id="meuModal">
+            <button aria-label="Fechar a Janela" id="btnFecharModal"></button>
+            <div id="msg">
+              <p>TESTE DE MSG</p>
+            </div>
+          </dialog>
 
           <form action="" method="">
             <fieldset>
@@ -39,7 +43,7 @@
                 <label for="idEmail">Email</label>
                 <input
                   type="email"
-                  id="idEmail"
+                  id="idEmail" 
                   name="email"
                   placeholder="Digite seu email"
                   minlength="7"
@@ -81,5 +85,8 @@
         Alexandre C. de Jesus - Todos os direitos reservados - &copy; - 2026
       </p>
     </footer>
+
+    
+
   </body>
 </html>
