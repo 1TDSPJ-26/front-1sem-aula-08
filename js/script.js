@@ -319,6 +319,7 @@ botaoEntrar.addEventListener("click", (e)=>{
                 let contador =5;
 
                 const intervalo = setInterval(()=>{
+                  contador--;
                   divMsg.innerHTML=`<p>Login realizado com sucesso!</p><p>VOCE SERA REDICERECIONADO EM ${contador}SEGUNDO........</p>`
                 }, 1000)
                 if(contador==0){
@@ -344,3 +345,6 @@ botaoEntrar.addEventListener("click", (e)=>{
 // Onde o usuário recebe a mensagem de Sucesso e que vai ser redirecionado em 5 segundos,
 // com um contador rodando.
 // Utilize a função window.location.href = destino para redirecionar o usuário!
+
+// REaproveitar a janela de modal no caso de o usuario errar o login.
+// realizar redirect com window em caso de sucesso!
