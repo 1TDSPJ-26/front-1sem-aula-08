@@ -294,7 +294,21 @@ botaoEntrar.addEventListener("click", (e)=>{
 
         for (const u of usuarios) {
             if(u.email === dadosForm.email && u.senha === dadosForm.senha){
-                alert("Login realizado com sucesso!");
+             
+                //Captura a janela de dialog:
+                const modal = document.querySelector("#meuModal");
+                modal.showModal();
+
+                //Capturando o botao do dialog para fechar a janela
+                const botaoModal = document.querySelector("#btnFecharModal");
+
+                //Atrelar um evento para o botão de fechamento encerrar a janela de dialog
+                botaoModal.addEventListener("click", ()=>{
+                //Utilizando o elemento dialog ja capturado para encerrar
+                modal.closest();
+            });
+
+            
                 isValid = true;
                 break;
             }
