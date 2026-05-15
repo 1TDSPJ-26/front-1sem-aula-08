@@ -307,7 +307,25 @@ botaoEntrar.addEventListener("click", (e)=>{
                   modal.close();
                 });
 
+                //TIMER COM INJEÇÃO DA MSG DE SUCESSO
+                //Capturar o elemento que apresenta a msg no dialog
+                const divMsg = document.querySelector("#msg");
 
+                //Adicionando uma nova tag a esta div capturada com a propriedade innerHTML.
+
+                divMsg.innerHTML = "<p>Login realizado com SUCESSO!</p><p>Você será redirecionado em 5 segundos...</p>";
+
+                let contador = 5;
+
+                const intervalo = setInterval( ()=>{
+                    contador--;
+                    divMsg.innerHTML = `<p>Login realizado com SUCESSO!</p><p>Você será redirecionado em ${contador} segundos...</p>`;
+
+                    if(contador === 0){
+                      clearInterval(intervalo);
+                    }
+                }, 1000 );
+                
                 isValid = true;
                 break;
             }
