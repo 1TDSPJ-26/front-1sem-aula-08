@@ -294,9 +294,19 @@ botaoEntrar.addEventListener("click", (e)=>{
 
         for (const u of usuarios) {
             if(u.email === dadosForm.email && u.senha === dadosForm.senha){
-                alert("Login realizado com sucesso!");
-                isValid = true;
-                break;
+                
+              //Capturar a janela de dialog:  
+              const modal = document.querySelector("#meuModal");
+              modal.showModal();
+              
+              //Capturando o botão do dialog para fechar a janela.
+              const botaoModal = document.querySelector("#btnFecharModal")
+              botaoModal.addEventListener("click", ()=>{
+                modal.close();
+              });
+
+              isValid = true;
+              break;
             }
         }
  
