@@ -1,3 +1,5 @@
+# LINK DO PROJETO: ![PROJETO DIÁRIO](https://github.com/1TDSPJ-26/front-1sem-aula-08.git)
+
 # 🚀 Front-End-Design-Engineering - TDS
 
 Este repositório centraliza os projetos e materiais de estudo da turma de Front-End. O foco é o desenvolvimento de interfaces modernas, acessíveis e performáticas, utilizando as melhores práticas do mercado.
