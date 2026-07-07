@@ -294,7 +294,7 @@ botaoEntrar.addEventListener("click", (e)=>{
 
         for (const u of usuarios) {
             if(u.email === dadosForm.email && u.senha === dadosForm.senha){
-               
+              
                 //Capturar a janela de dialog:
                 const modal = document.querySelector("#meuModal");
                 modal.showModal();
